@@ -1,3 +1,108 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,800');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700,800');
 
+body{
+    background: #9bcc4f;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100vh;
+}
 
+.container-height{
+    height: 100%;
+}
+
+.row{
+    height: 100%;
+}
+
+.name-container{
+    margin-top:0;
+    margin-bottom: 0;
+    left: 0;
+    right:auto;
+}
+
+.size-container{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: 60px;
+    padding-top: 50px;
+}
+
+.btn-arrow img{
+    width: 20px;
+    height: auto;
+}
+
+#pkm-number{
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#pkm-name{
+    color: #ffffff;
+    font-family:  'Nunito', sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.size-container span{
+    color: #ffffff;
+    font-family:  'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+#pkm-height{
+    color: #ffffff;
+    font-family:  'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#pkm-weight{
+    color: #ffffff;
+    font-family:  'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.size-container>span{
+    display: block;
+}
+
+#pokemon-image{
+    max-width: 400px;
+    height: 100%;
+}
+
+.pkm-img-position{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pkm-img-container{
+    position: relative;
+}
+
+#japanese-name{
+    display: block;
+    position: absolute;
+    bottom: auto;
+    top: 5px;
+    right: auto;
+    left: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 130px;
+    font-weight: 600;
+    word-break: keep-all;
+    word-wrap: normal;
+    transform: translateX(-45%);
+    opacity: .5;
+    color: rgba(0, 0, 0, 0.67);
+}

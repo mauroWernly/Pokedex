@@ -7,24 +7,29 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="pokedex.css">
 
     <title>Catch 'em all!</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid container-height">
         <div class="row">
-            <div class="col-md-3 col-12 col-sm-12">
-              <h2 id="pkm-number">#001</h2>
-              <h1 id="pkm-name">Bulbasaur</h1>
-              <span>
-                Height: <span id="pkm-height">0,7m</span>
-              </span>
-              <span>
-                Weigth: <span id="pkm-weight">6,9kg</span>
-              </span>
-              <span>Región: Kanto</span>
+            <div class="col-md-3 col-12 col-sm-12 d-flex flex-column">
+              <div class="name-container">
+                <h2 id="pkm-number">#001</h2>
+                <h1 id="pkm-name">Bulbasaur</h1>
+              </div>
+              <div class="size-container">
+                <span>
+                  Height: <span id="pkm-height">0,7m</span>
+                </span>
+                <span>
+                  Weigth: <span id="pkm-weight">6,9kg</span>
+                </span>
+              </div>
+              <!-- <span>Región: Kanto</span> -->
             </div>
-            <div class="col-md-5 col-12 col-sm-12">
+            <div class="col-md-5 col-12 col-sm-12 d-flex pkm-img-position">
               <div class="pkm-img-container">
                 <img src="images/pokemons/001Bulbasaur.png" id="pokemon-image">
                 <span id="japanese-name">フシギダネ</span>
@@ -59,8 +64,8 @@
                 </ul>
               </div>
               <div class="sidebar-container">
-                  <div class="btn-group btn-group-sm btn-group-vertical" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary">
+<!--                   <div class="btn-group btn-group-sm btn-group-vertical" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-arrow btn-secondary">
                         <img src="images/arrow.svg">
                       </button>
                       <button type="button" class="btn btn-secondary">1</button>
@@ -72,10 +77,10 @@
                       <button type="button" class="btn btn-secondary">7</button>
                       <button type="button" class="btn btn-secondary">8</button>
                       <button type="button" class="btn btn-secondary">9</button>
-                      <button type="button" class="btn btn-secondary">
+                      <button type="button" class="btn btn-arrow btn-secondary">
                         <img src="images/arrow.svg" alt="">
                       </button>
-                  </div>
+                  </div> -->
               </div>
             </div>
         </div>
