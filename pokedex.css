@@ -58,6 +58,16 @@ body{
     font-weight: 600;
 }
 
+@media (max-width: 1024px){
+    .size-container{
+        margin-bottom: 5px;
+    }
+    .name-container{
+        margin-top: auto;
+        padding-top: 125px;
+    }
+}
+
 #pkm-height{
     color: #ffffff;
     font-family:  'Nunito', sans-serif;
@@ -104,6 +114,17 @@ body{
 
 .pkm-img-container{
     position: relative;
+}
+
+@media (max-width: 1024px) {
+    #pokemon-image{
+        max-width: 250px;
+        height: auto;
+    }
+    span#japanese-name{
+        top: -25px;
+        font-size: 100px;
+    }
 }
 
 #japanese-name{
@@ -186,6 +207,12 @@ h3{
     margin: 0 15px 15px 0;
 }
 
+@media (max-width: 1024px) {
+    .sidebar-container div{
+        display: none;
+    }
+  }
+
 .sidebar-container button.sidebar-right{
     background: transparent;
     border: 0px;
@@ -250,9 +277,41 @@ h3{
 .bread-number:hover{
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .breadcrumb-item.active{
     color: #ffffff;
+}
+
+.left-arrow{
+    width: 20px;
+    height: auto;
+    transform: rotate(90deg);
+}
+
+.right-arrow{
+    width: 20px;
+    height: auto;
+    transform: rotate(-90deg);
+}
+
+ol button{
+    background: transparent;
+    border: 0;
+}
+
+ol button{
+    transition: all .3s ease-in-out;
+}
+
+ol button:hover{
+    transform: scale(1.2);
+}
+
+ol button:focus,
+.right-arrow,
+.left-arrow{
+    box-shadow: none;
+    outline: 0;
 }
