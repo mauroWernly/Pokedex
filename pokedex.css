@@ -41,7 +41,7 @@ body{
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 #pkm-name{
@@ -66,6 +66,22 @@ body{
 }
 
 #pkm-weight{
+    color: #ffffff;
+    font-family:  'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#region-word{
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    transform: rotate(-90deg) translateY(20px) translateX(30px);
+    transform-origin: 0 100%;
+}
+
+#pkm-region{
     color: #ffffff;
     font-family:  'Nunito', sans-serif;
     font-size: 15px;
@@ -168,4 +184,75 @@ h3{
     border-radius: 50%;
     box-shadow: 0 20px 25px -10px rgba(0,0,0,.15);
     margin: 0 15px 15px 0;
+}
+
+.sidebar-container button.sidebar-right{
+    background: transparent;
+    border: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    outline: 0;
+}
+
+.arrow-top img{
+    transform: rotate(180deg);
+}
+
+.btn-secondary:not(:disabled):not(.disabled) {
+    transition: all .3s ease-in-out;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):focus{
+    background-color: transparent;
+    transform: scale(1.2);
+    font-weight: 800;
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):hover{
+    outline: 0;
+    transform: scale(1.2);
+    box-shadow: none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active{
+    background-color: transparent;
+    outline: 0;
+    box-shadow: none!important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: none;
+}
+
+.breadcrumb-bg{
+    background: transparent;
+}
+
+.bread-number{
+    background: transparent;
+    border: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 0 10px;
+    transition: all .3s ease-in-out;
+}
+
+.bread-number a{
+    color: #ffffff;
+    opacity: .7;
+    text-decoration: none;
+}
+
+.bread-number:hover{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    transform: scale(1.2);
+}
+
+.breadcrumb-item.active{
+    color: #ffffff;
 }
