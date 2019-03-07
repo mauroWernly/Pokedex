@@ -61,10 +61,11 @@ body{
 @media (max-width: 1024px){
     .size-container{
         margin-bottom: 5px;
+        margin-top:40px;
     }
     .name-container{
-        margin-top: auto;
-        padding-top: 125px;
+        margin-top: 0;
+        padding-top: 150px;
     }
 }
 
@@ -120,12 +121,27 @@ body{
     #pokemon-image{
         max-width: 250px;
         height: auto;
+        margin-bottom: 60px;
     }
     span#japanese-name{
-        top: -25px;
+        top: -130px;
         font-size: 100px;
     }
+    .pkm-img-position{
+        justify-content: flex-end;
+    }
+    .container-characteristics{
+        margin-top: 40px;
+    }
 }
+
+
+/*  1)
+        se hace un pequeño scrollbar
+    2) 
+        la navbar de arriba desaparece pero no la puedo hacer reaparcer con " .d-sm-none .d-md-block ni sm ni lg.   "
+    
+    */
 
 #japanese-name{
     display: block;
