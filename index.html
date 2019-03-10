@@ -14,135 +14,134 @@
   </head>
   <body>
     <div class="container-fluid container-height">
-        <div class="row">
-          <div class="col-12">
+      <div class="row">
+        <div class="col-12">
 
-            <div class="sidebar-container">
-              <div class="btn-group btn-group-sm sidebar-container" role="group" aria-label="Basic example">
-                <button type="button" class="btn sidebar-right arrow-top btn-arrow btn-secondary">
-                  <img src="images/arrow.svg">
-                </button>
-                <button type="button" class="btn sidebar-right btn-secondary">1</button>
-                <button type="button" class="btn sidebar-right btn-secondary">2</button>
-                <button type="button" class="btn sidebar-right btn-secondary">3</button>
-                <button type="button" class="btn sidebar-right btn-secondary">4</button>
-                <button type="button" class="btn sidebar-right btn-secondary">5</button>
-                <button type="button" class="btn sidebar-right btn-secondary">6</button>
-                <button type="button" class="btn sidebar-right btn-secondary">7</button>
-                <button type="button" class="btn sidebar-right btn-secondary">8</button>
-                <button type="button" class="btn sidebar-right btn-secondary">9</button>
-                <button type="button" class="btn sidebar-right btn-secondary">10</button>
-                <button type="button" class="btn sidebar-right btn-arrow btn-secondary">
-                  <img src="images/arrow.svg" alt="">
-                </button>
-              </div>
-           </div>
-
+          <div class="sidebar-container d-md-flex mb-4 justify-content-center d-sm-flex d-flex d-lg-none">
+            <div class="btn-group btn-group-sm sidebar-container" role="group" aria-label="Basic example">
+              <button type="button" class="btn sidebar-right arrow-top btn-arrow btn-secondary">
+                <img src="images/arrow.svg">
+              </button>
+              <button type="button" class="btn sidebar-right btn-secondary">1</button>
+              <button type="button" class="btn sidebar-right btn-secondary">2</button>
+              <button type="button" class="btn sidebar-right btn-secondary">3</button>
+              <button type="button" class="btn sidebar-right btn-secondary">4</button>
+              <button type="button" class="btn sidebar-right btn-secondary">5</button>
+              <button type="button" class="btn sidebar-right btn-secondary">6</button>
+              <button type="button" class="btn sidebar-right btn-secondary">7</button>
+              <button type="button" class="btn sidebar-right btn-secondary">8</button>
+              <button type="button" class="btn sidebar-right btn-secondary">9</button>
+              <button type="button" class="btn sidebar-right btn-secondary">10</button>
+              <button type="button" class="btn sidebar-right btn-arrow btn-secondary">
+                <img src="images/arrow.svg" alt="">
+              </button>
+            </div>
           </div>
-          
-          <div class="col-md-3 col-12 col-sm-12 d-flex flex-column h-100">
-            <div class="name-container">
-              <h2 id="pkm-number">#001</h2>
-              <h1 id="pkm-name">Bulbasaur</h1>
-            </div>
-            <div class="size-container">
-              <span>
-                Height: <span id="pkm-height">0,7m</span>
-              </span>
-              <span>
-                Weigth: <span id="pkm-weight">6,9kg</span>
-              </span>
-            </div>
-            <span id="region-word">
-              Región: <span id="pkm-region">Kanto</span>
+
+        </div>
+        
+        <div class="first-column col-md-3 col-12 col-sm-12 d-flex flex-column h-100">
+          <div class="name-container">
+            <h2 id="pkm-number">#001</h2>
+            <h1 id="pkm-name">Bulbasaur</h1>
+          </div>
+          <div class="size-container">
+            <span>
+              Height: <span id="pkm-height">0,7m</span>
+            </span>
+            <span>
+              Weigth: <span id="pkm-weight">6,9kg</span>
             </span>
           </div>
-          <div class="col-md-5 col-12 col-sm-12 d-flex pkm-img-position h-100">
-            <div class="pkm-img-container">
-              <img src="images/pokemons/001Bulbasaur.png" id="pokemon-image">
-              <span id="japanese-name">フシギダネ</span>
+          <span id="region-word">
+            Región: <span id="pkm-region">Kanto</span>
+          </span>
+        </div>
+        <div class="second-column col-md-5 col-12 col-sm-12 d-flex pkm-img-position text-center text-md-left h-100">
+          <div class="pkm-img-container">
+            <img src="images/pokemons/001Bulbasaur.png" id="pokemon-image">
+            <span id="japanese-name">フシギダネ</span>
+          </div>
+        </div>
+        <div class="third-column col-md-4 col-12 col-sm-12 d-flex mt-auto mb-auto flex-row align-items-center h-100 text-center text-md-left">
+          <div class="container-characteristics">
+            <div class="container-type" id="container-type">
+              <img src="images/types/Grass.png" id="type-grass">
+              <img src="images/types/Poison.png" id="type-poison">
+            </div>
+            <h3>Base stats:</h3>
+            <div class="container-stats">
+              <ul>
+                <li class="item-stats">
+                  <span class="item-stats-pill">HP: <span>45</span></span>
+                </li>
+                <li class="item-stats">
+                  <span class="item-stats-pill">Attack: <span>49</span></span>
+                </li>
+                <li class="item-stats">
+                  <span class="item-stats-pill">Defense: <span>49</span></span>
+                </li>
+                <li class="item-stats">
+                  <span class="item-stats-pill">Sp. Attack: <span>65</span></span>
+                </li>
+                <li class="item-stats">
+                  <span class="item-stats-pill">Sp. Defense: <span>65</span></span>
+                </li>
+                <li class="item-stats">
+                  <span class="item-stats-pill">Speed: <span>45</span></span>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="col-md-4 col-12 col-sm-12 d-flex mt-auto mb-auto flex-row align-items-center h-100">
-            <div class="container-characteristics">
-              <div class="container-type" id="container-type">
-                <img src="images/types/Grass.png" id="type-grass">
-                <img src="images/types/Poison.png" id="type-poison">
-              </div>
-              <h3>Base stats:</h3>
-              <div class="container-stats">
-                <ul>
-                  <li class="item-stats">
-                    <span class="item-stats-pill">HP: <span>45</span></span>
-                  </li>
-                  <li class="item-stats">
-                    <span class="item-stats-pill">Attack: <span>49</span></span>
-                  </li>
-                  <li class="item-stats">
-                    <span class="item-stats-pill">Defense: <span>49</span></span>
-                  </li>
-                  <li class="item-stats">
-                    <span class="item-stats-pill">Sp. Attack: <span>65</span></span>
-                  </li>
-                  <li class="item-stats">
-                    <span class="item-stats-pill">Sp. Defense: <span>65</span></span>
-                  </li>
-                  <li class="item-stats">
-                    <span class="item-stats-pill">Speed: <span>45</span></span>
-                  </li>
-                </ul>
-              </div>
+
+          <div class="sidebar-container d-md-none d-sm-none d-none d-lg-flex">
+            <div class="btn-group btn-group-sm sidebar-container btn-group-vertical" role="group" aria-label="Basic example">
+              <button type="button" class="btn sidebar-right arrow-top btn-arrow btn-secondary">
+                <img src="images/arrow.svg">
+              </button>
+              <button type="button" class="btn sidebar-right btn-secondary">1</button>
+              <button type="button" class="btn sidebar-right btn-secondary">2</button>
+              <button type="button" class="btn sidebar-right btn-secondary">3</button>
+              <button type="button" class="btn sidebar-right btn-secondary">4</button>
+              <button type="button" class="btn sidebar-right btn-secondary">5</button>
+              <button type="button" class="btn sidebar-right btn-secondary">6</button>
+              <button type="button" class="btn sidebar-right btn-secondary">7</button>
+              <button type="button" class="btn sidebar-right btn-secondary">8</button>
+              <button type="button" class="btn sidebar-right btn-secondary">9</button>
+              <button type="button" class="btn sidebar-right btn-secondary">10</button>
+              <button type="button" class="btn sidebar-right btn-arrow btn-secondary">
+                <img src="images/arrow.svg" alt="">
+              </button>
             </div>
-
-            <div class="sidebar-container">
-              <div class="btn-group btn-group-sm sidebar-container btn-group-vertical" role="group" aria-label="Basic example">
-                <button type="button" class="btn sidebar-right arrow-top btn-arrow btn-secondary">
-                  <img src="images/arrow.svg">
-                </button>
-                <button type="button" class="btn sidebar-right btn-secondary">1</button>
-                <button type="button" class="btn sidebar-right btn-secondary">2</button>
-                <button type="button" class="btn sidebar-right btn-secondary">3</button>
-                <button type="button" class="btn sidebar-right btn-secondary">4</button>
-                <button type="button" class="btn sidebar-right btn-secondary">5</button>
-                <button type="button" class="btn sidebar-right btn-secondary">6</button>
-                <button type="button" class="btn sidebar-right btn-secondary">7</button>
-                <button type="button" class="btn sidebar-right btn-secondary">8</button>
-                <button type="button" class="btn sidebar-right btn-secondary">9</button>
-                <button type="button" class="btn sidebar-right btn-secondary">10</button>
-                <button type="button" class="btn sidebar-right btn-arrow btn-secondary">
-                  <img src="images/arrow.svg" alt="">
-                </button>
-              </div>
-           </div>
-
           </div>
-          <div class="col-12 align-self-end">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb mb-0 breadcrumb-bg justify-content-center">
-                <button>
-                  <img class="left-arrow" src="images/arrow.svg">
-                </button>
-                <li class="breadcrumb-item bread-number active" aria-current="page">1-10</li>
-                <li class="breadcrumb-item bread-number"><a href="#">11-20</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">21-30</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">31-40</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">41-50</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">51-60</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">61-70</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">71-80</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">81-90</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">91-100</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">101-110</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">111-120</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">121-130</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">131-140</a></li>
-                <li class="breadcrumb-item bread-number"><a href="#">141-150</a></li>
-                <button>
-                  <img class="right-arrow" src="images/arrow.svg">
-                </button>
-              </ol>
-            </nav>
-          </div>
+
+        </div>
+        <div class="col-12 align-self-end">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0 breadcrumb-bg justify-content-center">
+              <button>
+                <img class="left-arrow" src="images/arrow.svg">
+              </button>
+              <li class="breadcrumb-item bread-number active" aria-current="page">1-10</li>
+              <li class="breadcrumb-item bread-number"><a href="#">11-20</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">21-30</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">31-40</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">41-50</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">51-60</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">61-70</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">71-80</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">81-90</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">91-100</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">101-110</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">111-120</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">121-130</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">131-140</a></li>
+              <li class="breadcrumb-item bread-number"><a href="#">141-150</a></li>
+              <button>
+                <img class="right-arrow" src="images/arrow.svg">
+              </button>
+            </ol>
+          </nav>
         </div>
       </div>
     </div>

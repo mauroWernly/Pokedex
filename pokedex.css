@@ -9,6 +9,18 @@ body{
     height: 100vh;
 }
 
+@media (max-width: 1024px){
+    .first-column, 
+    .second-column,
+    .third-column{
+        height: auto !important;
+    }
+    body{
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+}
+
 .container-height{
     height: 100%;
 }
@@ -69,6 +81,12 @@ body{
     }
 }
 
+@media (max-width: 1024px){
+    .name-container{
+        padding-top: 0%;
+    }
+}
+
 #pkm-height{
     color: #ffffff;
     font-family:  'Nunito', sans-serif;
@@ -119,13 +137,9 @@ body{
 
 @media (max-width: 1024px) {
     #pokemon-image{
-        max-width: 250px;
+        max-width: 100%;
         height: auto;
         margin-bottom: 60px;
-    }
-    span#japanese-name{
-        top: -130px;
-        font-size: 100px;
     }
     .pkm-img-position{
         justify-content: flex-end;
@@ -134,14 +148,6 @@ body{
         margin-top: 40px;
     }
 }
-
-
-/*  1)
-        se hace un pequeño scrollbar
-    2) 
-        la navbar de arriba desaparece pero no la puedo hacer reaparcer con " .d-sm-none .d-md-block ni sm ni lg.   "
-    
-    */
 
 #japanese-name{
     display: block;
@@ -158,6 +164,26 @@ body{
     transform: translateX(-45%);
     opacity: .5;
     color: rgba(0, 0, 0, 0.67);
+}
+
+@media (max-width: 768px){
+    #japanese-name{
+        position: static;
+        transform: none;
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 600px){
+    #japanese-name{
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 414px){
+    #japanese-name{
+        font-size: 48px;
+    }
 }
 
 .container-stats ul {
@@ -222,12 +248,6 @@ h3{
     box-shadow: 0 20px 25px -10px rgba(0,0,0,.15);
     margin: 0 15px 15px 0;
 }
-
-@media (max-width: 1024px) {
-    .sidebar-container div{
-        display: none;
-    }
-  }
 
 .sidebar-container button.sidebar-right{
     background: transparent;
