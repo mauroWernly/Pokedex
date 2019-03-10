@@ -166,11 +166,24 @@ body{
     color: rgba(0, 0, 0, 0.67);
 }
 
+@media (max-width: 1140px){
+    #japanese-name{
+        font-size: 100px;
+        
+    }
+}
+
+@media (max-width: 1024px){
+    #japanese-name{
+        font-size: 80px;
+        
+    }
+}
+
 @media (max-width: 768px){
     #japanese-name{
         position: static;
         transform: none;
-        font-size: 100px;
     }
 }
 
@@ -230,6 +243,12 @@ li.item-stats{
     border-radius: 2px;
 }
 
+@media (max-width: 768px) {
+    .container-stats ul::before {
+        display: none;
+    }
+}
+
 h3{
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
@@ -264,6 +283,10 @@ h3{
 
 .arrow-left img{
     transform: rotate(90deg);
+}
+
+.arrow-right img{
+    transform: rotate(-90deg);
 }
 
 .btn-secondary:not(:disabled):not(.disabled) {
