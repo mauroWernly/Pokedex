@@ -262,6 +262,10 @@ h3{
     transform: rotate(180deg);
 }
 
+.arrow-left img{
+    transform: rotate(90deg);
+}
+
 .btn-secondary:not(:disabled):not(.disabled) {
     transition: all .3s ease-in-out;
 }
