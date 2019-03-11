@@ -24,6 +24,7 @@ $(document).ready(function () {
             $pkmnImageHolder = $('#pokemon-image'),
             pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
             pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
+            $pkmnContainerType = $('#container-type');
 
             console.log(pokemon[currentPkmnId].name.japanese);
 
@@ -36,5 +37,7 @@ $(document).ready(function () {
 
         var pkmnImageName = ('00' + currentPkmnIdIndexOne).slice(-3) + (pokemon[currentPkmnId].name.english) + '.png';
         $pkmnImageHolder.attr('src', 'images/pokemons/' + pkmnImageName);
+        $pkmnContainerType.empty();
+
     });
 });
