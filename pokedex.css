@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700,800');
 
 body{
-    background: #9bcc4f;
+    background: #92d1b4;
+    transition: background .3s ease-in-out;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 30px;
@@ -133,6 +134,8 @@ body{
 
 .pkm-img-container{
     position: relative;
+    transition: background .3s ease-in-out;
+    background: transparent !important;
 }
 
 @media (max-width: 1024px) {
