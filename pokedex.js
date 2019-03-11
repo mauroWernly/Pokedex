@@ -23,8 +23,14 @@ $(document).ready(function () {
             $pkmnNumberHolder = $('#pkm-number'),
             $pkmnImageHolder = $('#pokemon-image'),
             pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
-            pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
-            $pkmnContainerType = $('#container-type');
+            pkmnNewWeight = getRandomPkmnSizing(0.1, 355),
+            $pkmnContainerType = $('#container-type'),
+            $hpStat = $('#hp-stat'),
+            $attackStat = $('#attack-stat'),
+            $defenseStat = $('#defense-stat'),
+            $spAttackStat = $('#sp-attack-stat'),
+            $spDefenseStat = $('#sp-defense-stat'),
+            $speedStat = $('#speed-stat');
 
         $pkmnHeightHolder.text(pkmnNewHeight.toFixed(2) + 'm');
         $pkmnWeightHolder.text(pkmnNewWeight.toFixed(2) + 'kg');
@@ -40,9 +46,22 @@ $(document).ready(function () {
         var pkmnTypes = pokemon[currentPkmnId].type;
 
         for (currentType in pkmnTypes) {
-            $('<img src="images/types/' + pkmnTypes[currentType] + '.png">').append($pkmnContainerType);
-            console.log(pkmnTypes[currentType])
+            $('<img src="images/types/' + pkmnTypes[currentType] + '.png">').appendTo($pkmnContainerType);
         }
+        $hpStat.text(pokemon[currentPkmnId].base['HP']);
+        $attackStat.text(pokemon[currentPkmnId].base['Attack']);
+        $defenseStat.text(pokemon[currentPkmnId].base['Defense']);
+        $spAttackStat.text(pokemon[currentPkmnId].base['Sp. Attack']);
+        $spDefenseStat.text(pokemon[currentPkmnId].base['Sp. Defense']);
+        $speedStat.text(pokemon[currentPkmnId].base['Speed']);
 
+        /* Can't target the values of base with index. */
+
+        $.adaptiveBackground.run();
+
+        $pkmnImageHolder.on('ab-color-found', function(ev, payload) {
+            var currentBackgroundColor = $pkmnImageHolder.attr('data-ab-color');
+            $('body').css('background-color', currentBackgroundColor);
+        });
     });
 });
