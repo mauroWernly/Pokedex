@@ -26,8 +26,6 @@ $(document).ready(function () {
             pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
             $pkmnContainerType = $('#container-type');
 
-            console.log(pokemon[currentPkmnId].name.japanese);
-
         $pkmnHeightHolder.text(pkmnNewHeight.toFixed(2) + 'm');
         $pkmnWeightHolder.text(pkmnNewWeight.toFixed(2) + 'kg');
 
@@ -38,6 +36,13 @@ $(document).ready(function () {
         var pkmnImageName = ('00' + currentPkmnIdIndexOne).slice(-3) + (pokemon[currentPkmnId].name.english) + '.png';
         $pkmnImageHolder.attr('src', 'images/pokemons/' + pkmnImageName);
         $pkmnContainerType.empty();
+
+        var pkmnTypes = pokemon[currentPkmnId].type;
+
+        for (currentType in pkmnTypes) {
+            $('<img src="images/types/' + pkmnTypes[currentType] + '.png">').append($pkmnContainerType);
+            console.log(pkmnTypes[currentType])
+        }
 
     });
 });
