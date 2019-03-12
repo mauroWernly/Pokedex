@@ -25,19 +25,13 @@ $(document).ready(function () {
         return Math.random() * (max - min) + min;
     }
 
-    $btnPokemonChange.on('click', function (e) {
-        e.preventDefault();
-
-        var $currentBtn = $(this),
-            pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
+    function getNewPkmnInfo() {
+        var pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
             pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
-
-        currentPkmnId = parseInt($currentBtn.text()) - 1;
-        currentPkmnIdIndexOne = parseInt($currentBtn.text());
 
         $pkmnHeightHolder.text(pkmnNewHeight.toFixed(2) + 'm');
         $pkmnWeightHolder.text(pkmnNewWeight.toFixed(2) + 'kg');
-
+        
         $pkmnNameHolder.text(pokemon[currentPkmnId].name.english);
         $pkmnJapaneseNameHolder.text(pokemon[currentPkmnId].name.japanese);
         $pkmnNumberHolder.text('#' + ('00' + currentPkmnIdIndexOne).slice(-3));
@@ -66,21 +60,48 @@ $(document).ready(function () {
             var currentBackgroundColor = $pkmnImageHolder.attr('data-ab-color');
             $('body').css('background-color', currentBackgroundColor);
         });
+    }
+
+    $btnPokemonChange.on('click', function (e) {
+        e.preventDefault();
+
+        var $currentBtn = $(this);
+
+        currentPkmnId = parseInt($currentBtn.text()) - 1;
+        currentPkmnIdIndexOne = parseInt($currentBtn.text());
+
+        getNewPkmnInfo();
     });
 
-    var $getPrevPkmn = $('#arrow-top-btn'),
-        $getNextPkmn = $('#arrow-bottom-btn');
+    var $getPrevPkmn = $('#arrow-prev-btn'),
+        $getNextPkmn = $('#arrow-next-btn');
     
     $getPrevPkmn.on('click', function (e){
-        var pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
-            pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
-        console.log(pokemon[currentPkmnId - 1].name.english);
-        
+        e.preventDefault();
+
+        if (currentPkmnId > 0) {
+            var pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
+                pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
+
+            currentPkmnId = currentPkmnId - 1,
+            currentPkmnIdIndexOne = currentPkmnIdIndexOne - 1;
+
+            getNewPkmnInfo();
+        }
     });
+
     $getNextPkmn.on('click', function(e){
-        var pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
-            pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
-       console.log(pokemon[currentPkmnId + 1].name.english);
+        e.preventDefault();
+
+        if (currentPkmnId < 809) {
+            var pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
+                pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
+
+            currentPkmnId = currentPkmnId + 1,
+            currentPkmnIdIndexOne = currentPkmnIdIndexOne + 1;
+
+            getNewPkmnInfo();
+        }
     });
 
 });

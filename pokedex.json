@@ -547,8 +547,8 @@
   {
     "id": 29,
     "name": {
-      "english": "Nidoran♀",
-      "japanese": "ニドラン♀",
+      "english": "Nidoran",
+      "japanese": "ニドラン",
       "chinese": "尼多兰"
     },
     "type": [
@@ -605,8 +605,8 @@
   {
     "id": 32,
     "name": {
-      "english": "Nidoran♂",
-      "japanese": "ニドラン♂",
+      "english": "Nidoran",
+      "japanese": "ニドラン",
       "chinese": "尼多朗"
     },
     "type": [
@@ -1599,7 +1599,7 @@
   {
     "id": 83,
     "name": {
-      "english": "Farfetch'd",
+      "english": "Farfetchd",
       "japanese": "カモネギ",
       "chinese": "大葱鸭"
     },
@@ -2354,7 +2354,7 @@
   {
     "id": 122,
     "name": {
-      "english": "Mr. Mime",
+      "english": "Mr Mime",
       "japanese": "バリヤード",
       "chinese": "魔墙人偶"
     },
@@ -8530,7 +8530,7 @@
   {
     "id": 439,
     "name": {
-      "english": "Mime Jr.",
+      "english": "Mime Jr",
       "japanese": "マネネ",
       "chinese": "魔尼尼"
     },
@@ -12522,7 +12522,7 @@
   {
     "id": 644,
     "name": {
-      "english": "Zekrom ",
+      "english": "Zekrom",
       "japanese": "ゼクロム",
       "chinese": "捷克罗姆"
     },
