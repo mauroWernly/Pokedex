@@ -1,8 +1,23 @@
 $(document).ready(function () {
     var $btnPokemonChange = $('.btn.sidebar-right:not(.btn-arrow)'),
-        pokemon = [];
+        pokemon = [],
+        currentPkmnId = 0,
+        currentPkmnIdIndexOne = 1,
+        $pkmnHeightHolder = $('#pkm-height'),
+        $pkmnWeightHolder = $('#pkm-weight'),
+        $pkmnNameHolder = $('#pkm-name'),
+        $pkmnJapaneseNameHolder = $('#japanese-name'),
+        $pkmnNumberHolder = $('#pkm-number'),
+        $pkmnImageHolder = $('#pokemon-image'),
+        $pkmnContainerType = $('#container-type'),
+        $hpStat = $('#hp-stat'),
+        $attackStat = $('#attack-stat'),
+        $defenseStat = $('#defense-stat'),
+        $spAttackStat = $('#sp-attack-stat'),
+        $spDefenseStat = $('#sp-defense-stat'),
+        $speedStat = $('#speed-stat');
 
-    $.getJSON('./pokedex.json', function (data) {
+    $.getJSON('./pokedex.json', function(data) {
         pokemon = data;
     });
 
@@ -14,23 +29,11 @@ $(document).ready(function () {
         e.preventDefault();
 
         var $currentBtn = $(this),
-            currentPkmnId = parseInt($currentBtn.text()) - 1,
-            currentPkmnIdIndexOne = parseInt($currentBtn.text()),
-            $pkmnHeightHolder = $('#pkm-height'),
-            $pkmnWeightHolder = $('#pkm-weight'),
-            $pkmnNameHolder = $('#pkm-name'),
-            $pkmnJapaneseNameHolder = $('#japanese-name'),
-            $pkmnNumberHolder = $('#pkm-number'),
-            $pkmnImageHolder = $('#pokemon-image'),
             pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
-            pkmnNewWeight = getRandomPkmnSizing(0.1, 355),
-            $pkmnContainerType = $('#container-type'),
-            $hpStat = $('#hp-stat'),
-            $attackStat = $('#attack-stat'),
-            $defenseStat = $('#defense-stat'),
-            $spAttackStat = $('#sp-attack-stat'),
-            $spDefenseStat = $('#sp-defense-stat'),
-            $speedStat = $('#speed-stat');
+            pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
+
+        currentPkmnId = parseInt($currentBtn.text()) - 1;
+        currentPkmnIdIndexOne = parseInt($currentBtn.text());
 
         $pkmnHeightHolder.text(pkmnNewHeight.toFixed(2) + 'm');
         $pkmnWeightHolder.text(pkmnNewWeight.toFixed(2) + 'kg');
@@ -64,4 +67,20 @@ $(document).ready(function () {
             $('body').css('background-color', currentBackgroundColor);
         });
     });
+
+    var $getPrevPkmn = $('#arrow-top-btn'),
+        $getNextPkmn = $('#arrow-bottom-btn');
+    
+    $getPrevPkmn.on('click', function (e){
+        var pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
+            pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
+        console.log(pokemon[currentPkmnId - 1].name.english);
+        
+    });
+    $getNextPkmn.on('click', function(e){
+        var pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
+            pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
+       console.log(pokemon[currentPkmnId + 1].name.english);
+    });
+
 });
