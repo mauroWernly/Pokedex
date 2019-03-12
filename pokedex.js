@@ -73,8 +73,8 @@ $(document).ready(function () {
         getNewPkmnInfo();
     });
 
-    var $getPrevPkmn = $('#arrow-prev-btn'),
-        $getNextPkmn = $('#arrow-next-btn');
+    var $getPrevPkmn = $('#arrow-prev-btn, #arrow-prev-btn-topbar'),
+        $getNextPkmn = $('#arrow-next-btn, #arrow-next-btn-top');
     
     $getPrevPkmn.on('click', function (e){
         e.preventDefault();
