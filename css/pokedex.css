@@ -398,3 +398,9 @@ ol button:focus,
 #arrow-next-btn img {
     filter: drop-shadow(0 0 10px rgba(0,0,0,.5));
 }
+
+@media (max-width: 768px){
+    input.input-resizing{
+        max-width: 200px;
+    }
+}

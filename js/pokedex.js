@@ -82,7 +82,7 @@ $(document).ready(function () {
     });
 
     var $getPrevPkmn = $('#arrow-prev-btn, #arrow-prev-btn-topbar'),
-        $getNextPkmn = $('#arrow-next-btn, #arrow-next-btn-top');
+        $getNextPkmn = $('#arrow-next-btn, #arrow-next-btn-topbar');
     
     $getPrevPkmn.on('click', function (e){
         e.preventDefault();
