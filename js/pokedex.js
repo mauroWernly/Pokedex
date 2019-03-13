@@ -15,11 +15,19 @@ $(document).ready(function () {
         $defenseStat = $('#defense-stat'),
         $spAttackStat = $('#sp-attack-stat'),
         $spDefenseStat = $('#sp-defense-stat'),
-        $speedStat = $('#speed-stat');
+        $speedStat = $('#speed-stat'),
+        $pokemonNameBtn = $('#pokemon-name-btn'),
+        $pokemonNumberBtn = $('#pokemon-number-btn'),
+        $pokemonNameInput = $('#pokemon-name-input'),
+        $pokemonNumberInput = $('#pokemon-number-input');
 
     $.getJSON('./data/pokedex.json', function(data) {
         pokemon = data;
     });
+
+    String.prototype.capitalize = function() {
+        return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+    };
 
     function getRandomPkmnSizing(min, max) {
         return Math.random() * (max - min) + min;
@@ -104,6 +112,36 @@ $(document).ready(function () {
         }
     });
 
-    
+    $pokemonNameBtn.on('click', function(e){
+        e.preventDefault();
+        var newPokemonInputName = $pokemonNameInput.val(),
+            newPokemonInputNameCapitalized = newPokemonInputName.capitalize();
+
+        for (currentPokemon in pokemon) {
+            if (pokemon[currentPokemon].name.english == newPokemonInputNameCapitalized) {
+                currentPkmnId = pokemon[currentPokemon].id - 1,
+                currentPkmnIdIndexOne = pokemon[currentPokemon].id;
+
+                getNewPkmnInfo();
+
+                return;
+            }
+        }
+        
+    });
+    $pokemonNumberBtn.on('click', function(e){
+        e.preventDefault();
+        var newPokemonInputNumber = $pokemonNumberInput.val(),
+            newPokemonInputNumberInt = parseInt(newPokemonInputNumber);
+        
+        if (newPokemonInputNumberInt >= 1 && newPokemonInputNumber <= 809) {
+            currentPkmnId = newPokemonInputNumberInt - 1,
+            currentPkmnIdIndexOne = newPokemonInputNumberInt;
+
+            getNewPkmnInfo();
+        } else {
+            alert('There are no Pokémon with that Pokédex index number');
+        }
+    });
 
 });
