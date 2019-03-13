@@ -17,7 +17,7 @@ $(document).ready(function () {
         $spDefenseStat = $('#sp-defense-stat'),
         $speedStat = $('#speed-stat');
 
-    $.getJSON('./pokedex.json', function(data) {
+    $.getJSON('./data/pokedex.json', function(data) {
         pokemon = data;
     });
 
@@ -103,5 +103,7 @@ $(document).ready(function () {
             getNewPkmnInfo();
         }
     });
+
+    
 
 });
