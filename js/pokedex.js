@@ -87,6 +87,16 @@ $(document).ready(function () {
     $getPrevPkmn.on('click', function (e){
         e.preventDefault();
 
+        if (currentPkmnIdIndexOne > 1) {
+            // 10 is the least amount of Pokémon available in the sidebar
+            $btnPokemonChange.each(function(index) {
+                var buttonId = parseInt($(this).text()),
+                    newButtonId = buttonId - 1;
+
+                $(this).text(newButtonId);
+            });
+        }
+
         if (currentPkmnId > 0) {
             var pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
                 pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
@@ -100,6 +110,16 @@ $(document).ready(function () {
 
     $getNextPkmn.on('click', function(e){
         e.preventDefault();
+
+        if (currentPkmnIdIndexOne < 809) {
+            // 799 is the last Pokémon minus 10
+            $btnPokemonChange.each(function(index) {
+                var buttonId = parseInt($(this).text()),
+                    newButtonId = buttonId + 1;
+
+                $(this).text(newButtonId);
+            });
+        }
 
         if (currentPkmnId < 809) {
             var pkmnNewHeight = getRandomPkmnSizing(0.5, 14),

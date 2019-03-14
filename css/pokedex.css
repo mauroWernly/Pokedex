@@ -4,7 +4,7 @@ body{
     background: #92d1b4;
     transition: background .3s ease-in-out;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
     padding-left: 30px;
     padding-right: 30px;
     height: 100vh;
@@ -403,4 +403,24 @@ ol button:focus,
     input.input-resizing{
         max-width: 200px;
     }
+    .btn.sidebar-right {
+        width: 38px;
+    }
+}
+
+input.input-resizing,
+button.button-go{
+    opacity: .7;
+}
+
+input.input-resizing:hover,
+button.button-go:hover{
+    opacity: 1;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.sidebar-container-top{
+    max-width: 80%;
+    flex-wrap: wrap;
 }
