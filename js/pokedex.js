@@ -1,5 +1,7 @@
 $(document).ready(function () {
     var $btnPokemonChange = $('.btn.sidebar-right:not(.btn-arrow)'),
+        $btnPokemonChangeSide = $('.sidebar-desktop .btn.sidebar-right:not(.btn-arrow)'),
+        $btnPokemonChangeTop = $('.sidebar-mobile .btn.sidebar-right:not(.btn-arrow)'),
         pokemon = [],
         currentPkmnId = 0,
         currentPkmnIdIndexOne = 1,
@@ -98,9 +100,6 @@ $(document).ready(function () {
         }
 
         if (currentPkmnId > 0) {
-            var pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
-                pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
-
             currentPkmnId = currentPkmnId - 1,
             currentPkmnIdIndexOne = currentPkmnIdIndexOne - 1;
 
@@ -122,9 +121,6 @@ $(document).ready(function () {
         }
 
         if (currentPkmnId < 809) {
-            var pkmnNewHeight = getRandomPkmnSizing(0.5, 14),
-                pkmnNewWeight = getRandomPkmnSizing(0.1, 355);
-
             currentPkmnId = currentPkmnId + 1,
             currentPkmnIdIndexOne = currentPkmnIdIndexOne + 1;
 
@@ -144,6 +140,16 @@ $(document).ready(function () {
 
                 getNewPkmnInfo();
 
+                if (currentPkmnIdIndexOne <= 799) {
+                    $btnPokemonChangeSide.each(function(index) {
+                        $(this).text(currentPkmnIdIndexOne + index);
+                    });
+        
+                    $btnPokemonChangeTop.each(function(index) {
+                        $(this).text(currentPkmnIdIndexOne + index);
+                    });
+                }
+
                 return;
             }
         }
@@ -161,6 +167,16 @@ $(document).ready(function () {
             getNewPkmnInfo();
         } else {
             alert('There are no Pokémon with that Pokédex index number');
+        }
+
+        if (newPokemonInputNumberInt <= 799) {
+            $btnPokemonChangeSide.each(function(index) {
+                $(this).text(newPokemonInputNumberInt + index);
+            });
+
+            $btnPokemonChangeTop.each(function(index) {
+                $(this).text(newPokemonInputNumberInt + index);
+            });
         }
     });
 
